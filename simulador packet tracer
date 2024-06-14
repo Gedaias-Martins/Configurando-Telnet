@@ -1,0 +1,24 @@
+Estudo de Telnet
+Configurando o protocolo telnet e criando senha.
+Criar conexão entre swith e roteador
+
+NY_SW1#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+NY_SW1(config)#line vty 0 4
+NY_SW1(config-line)#password cisco
+NY_SW1(config-line)#transport input ?
+  all     All protocols
+  none    No protocols
+  ssh     TCP/IP SSH protocol
+  telnet  TCP/IP Telnet protocol
+NY_SW1(config-line)#transport input 
+% Incomplete command.
+NY_SW1(config-line)#
+NY_SW1(config-line)#transport input telnet
+NY_SW1(config-line)#end
+NY_SW1#
+%SYS-5-CONFIG_I: Configured from console by console
+
+NY_SW1#show running-config 
+
+O Telnet é um protocolo de rede normalmente usado para agilizar o conserto de falhas em computadores. Ele possibilita uma conexão remota entre duas máquinas, facilitando não só a correção de erros, mas também o acesso a programas e dados.
